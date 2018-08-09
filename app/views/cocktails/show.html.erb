@@ -1,0 +1,39 @@
+<!-- <div class="container"> -->
+  <div class="header">
+    <div class="show-cocktail-name">
+      <!-- cocktails/ --><%= @cocktail.name %>
+    </div>
+  </div>
+  <div class="doses">
+    <div class="show-card">
+      <h3><em>Doses:</em></h3>
+      <% @cocktail.doses.reject(&:new_record?).each do |dose| %>
+        <p>
+          <%= dose.description %>, <%= Ingredient.find(dose.ingredient_id).name %>
+          div.
+          <%= link_to '<i class="far fa-trash-alt"></i>'.html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %></p>
+    <% end %>
+    </div>
+    <div class="show-form dose-form">
+      <%= render 'cocktails/dose_form' %>
+    </div>
+  </div>
+  <div class="reviews">
+    <div class="show-card">
+      <h3><em>Reviews:</em></h3>
+      <% @cocktail.reviews.each do |review| %>
+        <p><%= review.rating %>/5 <%= review.content %></p>
+      <% end %>
+    </div>
+    <div class="show-form review-form">
+      <%= render 'cocktails/review_form' %>
+    </div>
+  </div>
+  <div class="show-fotter">
+    <div class="show-back-link">
+      <%= link_to "Back to cocktails", cocktails_path, class: " text-center" %>
+    </div>
+  </div>
+
+<!-- %rum% -->
+<!-- </div> -->

@@ -1,0 +1,25 @@
+
+
+<!--
+<div class="wrapper"> -->
+  <div class="title text-center">
+    <h1 >Here are our cocktails:</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-4">
+          <%= link_to cocktail_path(cocktail) do %>
+            <div class="cocktail-card">
+              <div class="cocktail-name">
+                <%= cocktail.name.capitalize %>
+              </div>
+              <%#= link_to cocktail.name, cocktail_path(cocktail) %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<!-- </div> -->

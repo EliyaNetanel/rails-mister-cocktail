@@ -1,0 +1,22 @@
+
+.cocktail-card {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height:350;
+  width:200;
+  .cocktail-name {
+    padding-top: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      text-decoration:none;
+    }
+  }
+}

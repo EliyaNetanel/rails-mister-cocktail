@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <a class="navbar-brand" href="/"><%= image_tag "cocktail"%></a>
+
+  <div class="actions">
+<!--     <div class="ml-auto flex">
+ -->      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" name="query" placeholder="Search" aria-label="Search" value="" type="search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <!-- <a class="btn btn-outline-primary my-2 my-sm-0 ml-2" href="/flats/new">Add Cocktail</a> -->
+      <%= link_to 'Add Cocktail', new_cocktail_path, class: 'btn btn-outline-primary my-2 my-sm-0 ml-2' %>
+    </div>
+  </div>
+</nav>
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Simple Airbnb</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="ml-auto flex">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" name="query" placeholder="Search" aria-label="Search" value="" type="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <a class="btn btn-outline-primary my-2 my-sm-0 ml-2" href="/flats/new">Add Flat</a>
+        </div>
+      </div>
+    </nav> -->

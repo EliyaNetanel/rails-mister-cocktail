@@ -1,0 +1,8 @@
+<h3><em>Add review:</em></h3>
+
+<%= simple_form_for [@cocktail, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating %>
+
+  <%= f.submit %>
+<% end %>
