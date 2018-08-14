@@ -1,4 +1,6 @@
 
+<%#= cl_image_tag("background.jpg",width: 1000, height: 720) %>
+
 
 <!--
 <div class="wrapper"> -->
@@ -11,9 +13,14 @@
       <% @cocktails.each do |cocktail| %>
         <div class="col-xs-12 col-sm-4">
           <%= link_to cocktail_path(cocktail) do %>
-            <div class="cocktail-card">
+            <div class="cocktail-card" >
               <div class="cocktail-name">
                 <%= cocktail.name.capitalize %>
+              </div>
+              <div class="photo">
+                  <%#= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
+                <%= cl_image_tag cocktail.photo, height: 250, width: 200, crop: :fill %>
               </div>
               <%#= link_to cocktail.name, cocktail_path(cocktail) %>
             </div>

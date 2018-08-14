@@ -1,11 +1,12 @@
 body.cocktails.new, body.cocktails.create {
-  background-image: url("background.jpg");
+  // background-image: url("background.jpg");
   background-size: cover;
 .new-header {
   display: flex;
   justify-content: center;
   h1 {
-    display: flex;
+    margin-top: 90px;
+    // display: flex;
     color: white;
     justify-content: center;
     font-size:35px;

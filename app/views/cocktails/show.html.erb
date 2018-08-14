@@ -4,8 +4,12 @@
       <!-- cocktails/ --><%= @cocktail.name %>
     </div>
   </div>
+
+  <%#= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
   <div class="doses">
     <div class="show-card">
+
       <h3><em>Doses:</em></h3>
       <% @cocktail.doses.reject(&:new_record?).each do |dose| %>
         <p>

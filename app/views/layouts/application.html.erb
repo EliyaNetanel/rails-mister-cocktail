@@ -11,9 +11,22 @@
     <%#= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="<%= params[:controller] %> <%= params[:action] %>">
+
+    <body class="<%= params[:controller] %> <%= params[:action] %>"
+      <% if current_page?(root_path) || current_page?(new_cocktail_path) || current_page?(cocktails_path) %>
+        style="background-image: url(<%= cl_image_path('background.jpg') %>)"
+      <% else %>
+        style="background-image: url(<%= cl_image_path(@cocktail.photo) %>)"
+      <% end %>
+      >
+
+
+
+
     <%= render 'layouts/navbar' %>
     <%= yield %>
+    <%#= cl_image_tag('background.jpg') %>
+
     <%= javascript_include_tag "application" %>
     <%= javascript_pack_tag "application" %>
   </body>

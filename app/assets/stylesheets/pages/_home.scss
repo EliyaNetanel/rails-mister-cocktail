@@ -3,7 +3,8 @@
 body.cocktails.index{
     // background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url("background.jpg");
 //
-  background-image: url("background.jpg");
+
+  // background-image: url(<%= cl_image_tag("background.jpg") %>);
   // background-color: red;
   background-size: cover;
 //   height: 800px;
@@ -16,7 +17,7 @@ body.cocktails.index{
 .cocktail-card {
   height: 350px;
   width: 300px;
-  background-color: rgba(90,90,90,0.5);
+  background-color: rgba(90,90,90,0.8);
   padding: 10px;
   margin-left: 10px;
   margin-bottom: 50px;
@@ -33,6 +34,12 @@ body.cocktails.index{
   }
   &:hover {
     text-decoration: none;
+  }
+  .photo {
+    margin-top:8px;
+    img {
+      border-radius: 5px;
+    }
   }
   a {
     padding-bottom: 10px;

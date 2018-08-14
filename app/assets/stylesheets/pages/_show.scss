@@ -1,8 +1,19 @@
 // body.cocktails.index
+
+
+.new-header {
+  margin-top:90px;
+}
+
+.header {
+  margin-top:90px;
+}
 body.cocktails.show, body.doses.create{
-  background-image: url("c1.jpg");
+  // background-image: url("c1.jpg");
+  // background-image: url(<%= cl_image_path(cocktail.photo) %>);
   background-size: cover;
   color: white;
+
 
 .show-card {
   border-radius:10px;
@@ -81,6 +92,7 @@ body.cocktails.show, body.doses.create{
   justify-content: center;
 
   .show-cocktail-name {
+    margin-top:90px;
     display: flex;
     color: white;
     justify-content: center;
